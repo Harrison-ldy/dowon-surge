@@ -11,8 +11,7 @@ Dowon Surge 是一套基于成熟 Surge 配置裁剪并加入个人路由逻辑�
 - 结构性 `Fail Closed = reject`，用于阻止空组触发 Surge `SUBSTITUTE(DIRECT)`；
 - `其他节点` 手动组；
 - `Entry`；
-- Sub-Store 官方 Surge 模块配合；
-- `Korea VPS` / `USA VPS` 从本机 Sub-Store 读取 `ss://` 并转换为 Surge；
+- `Korea VPS` / `USA VPS` 本地手动节点占位；
 - `VPS Exit`；
 - `Entry → VPS` 链式代理；
 - `Video Exit`；
@@ -27,7 +26,6 @@ Mac Beta 已实际发现 Surge 在策略组无可用成员时会使用 `SUBSTITU
 - `config/Dowon-Surge.conf` — 当前 Public Beta 配置
 - `rules/china-direct.list` — 中国明确直连白名单
 - `rules/video.list` — 用户指定视频服务规则
-- `docs/SUBSTORE_SETUP.md` — Sub-Store 与 VPS 添加说明
 
 ## 机场订阅
 
@@ -39,38 +37,32 @@ Mac Beta 已实际发现 Surge 在策略组无可用成员时会使用 `SUBSTITU
 
 真实订阅 URL/Token 不进入 GitHub。
 
-## VPS：改用 Sub-Store 官方模块
+## VPS：本地手动填写
 
-Dowon 主配置不再内联 Sub-Store 的 Script/MITM。Sub-Store 由 Surge 的官方模块单独安装和更新，主配置只负责安全映射与读取本地输出。
-
-官方模块 URL：
-
-```text
-https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
-```
-
-首次使用：
-1. 在 Surge 的模块页面安装并启用上面的官方 Sub-Store 模块；
-2. 安装并信任 Surge MITM 根证书；
-3. 用 Safari 打开 `https://sub.store`，确认进入 Sub-Store；
-4. 新建本地单订阅 `Korea-VPS`，粘贴韩国 VPS 的完整 `ss://`；
-5. 新建本地单订阅 `USA-VPS`，粘贴美国 VPS 的完整 `ss://`。
-
-主配置读取：
-
-```text
-https://sub.store/download/Korea-VPS/Surge
-https://sub.store/download/USA-VPS/Surge
-```
-
-主配置继续保留：
+Public 配置只保留无秘密占位：
 
 ```ini
-[Host]
-sub.store = 127.0.0.1
+[Proxy]
+Fail Closed = reject
+Korea VPS = reject
+USA VPS = reject
 ```
 
-这是安全保护：如果官方模块没有接管请求，访问会留在本机失败，而不是把本地 Sub-Store 请求误发到公网 `sub.store`。
+下载到 Surge 后，在本地把 `Korea VPS` / `USA VPS` 两行替换为真实代理节点定义。真实服务器地址、端口、密码、密钥或分享链接不进入 GitHub。
+
+链式由主配置负责：
+
+```ini
+VPS Exit = select, Korea VPS, USA VPS, underlying-proxy=Entry, category=GROUP
+```
+
+因此真实 VPS 填好后，普通流量路径为：
+
+```text
+Device → Entry → selected VPS → Internet
+```
+
+如果 VPS 仍是 `reject` 占位或真实 VPS 不可用，请求失败，不主动回退 DIRECT，也不自动跨 VPS。
 
 ## DNS 隐私
 
@@ -104,11 +96,11 @@ RULE-SET:https://raw.githubusercontent.com/Harrison-ldy/dowon-surge/main/rules/c
 
 地区自动组现在使用 `url-test + Fail Closed + evaluate-before-use=true`。这是因为 Mac Beta 已实测空组会 DIRECT，不再继续沿用原来的空 `smart` 风险。
 
-VPS 组使用：
+VPS 使用本地叶子节点定义：
 
 ```text
-真实 Sub-Store VPS 可用 → Entry → VPS
-未配置 / 为空 / VPS 不可用 → Fail Closed → REJECT
+真实 VPS 已填写且可用 → Entry → VPS
+仍为 reject 占位 / VPS 不可用 → 请求失败
 ```
 
 不主动添加 DIRECT、跨地区 fallback 或跨 VPS fallback。
@@ -127,8 +119,6 @@ video.list           → Video Exit
 ## Beta 提醒
 
 这仍然是 Beta。下一步需要在 Mac/iPhone Surge 实测：
-- Sub-Store 官方模块是否正常启用，Safari 能否打开本地 `https://sub.store`；
-- `Korea-VPS` / `USA-VPS` 是否能从 ss:// 正确输出；
 - Entry → VPS 链式实际出口；
 - 机场订阅失效或地区零匹配时是否保持 REJECT 而不是 DIRECT；
 - DNS / UDP；
