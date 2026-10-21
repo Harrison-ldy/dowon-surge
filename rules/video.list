@@ -1,10 +1,151 @@
 # Dowon Surge - Video
 #
-# 用户明确指定的视频服务域名。
-# 匹配后统一交给主配置中的 Video Exit。
+# 用户明确指定的影视站、XPTV 资源 API、播放器与固定 CDN。
+# 命中后统一交给主配置中的 Video Exit，不经过 VPS Exit。
 #
-# 不继承大而全的 Netflix / Disney / GlobalMedia 规则。
-# 实际域名在使用中确认后再添加，不猜测。
-#
-# Example:
-# DOMAIN-SUFFIX,example.com
+# 维护原则：
+# - 只收录已确认与影视访问/播放直接相关的域名。
+# - 不收录 GitHub/Raw、脚本代理分发地址、Telegram、AI、通用网盘。
+# - 动态 m3u8 / CDN 域名不猜测；实际播放时发现未命中再补充。
+# - 不继承大而全的 Netflix / Disney / GlobalMedia 规则。
+
+# ========================
+# XPTV Type 1 资源 API
+# ========================
+
+DOMAIN-SUFFIX,xinlangapi.com
+DOMAIN-SUFFIX,niuniuzy.me
+DOMAIN-SUFFIX,360zy.com
+DOMAIN-SUFFIX,mdzyapi.com
+DOMAIN-SUFFIX,jinyingzy.com
+DOMAIN-SUFFIX,yayazy.net
+DOMAIN-SUFFIX,ukuapi.com
+DOMAIN-SUFFIX,hhzyapi.com
+DOMAIN-SUFFIX,jszyapi.com
+DOMAIN-SUFFIX,suoniapi.com
+DOMAIN-SUFFIX,ikunzyapi.com
+DOMAIN-SUFFIX,ffzyapi.com
+DOMAIN-SUFFIX,lziapi.com
+DOMAIN-SUFFIX,bfzyapi.com
+DOMAIN-SUFFIX,hongniuzy2.com
+DOMAIN-SUFFIX,sdzyapi.com
+DOMAIN-SUFFIX,apiyhzy.com
+DOMAIN-SUFFIX,huyaapi.com
+DOMAIN-SUFFIX,wujinapi.com
+DOMAIN-SUFFIX,subocaiji.com
+DOMAIN-SUFFIX,moduapi.cc
+DOMAIN-SUFFIX,zuidazy.me
+
+# ========================
+# XPTV Type 3 主站 / API / 播放器 / 固定 CDN
+# ========================
+
+# 网飞猫
+DOMAIN-SUFFIX,ncat21.com
+DOMAIN-SUFFIX,zyxpedu.com
+
+# 乌云影视
+DOMAIN-SUFFIX,wooyun.tv
+
+# 独播库
+DOMAIN-SUFFIX,dbku.tv
+
+# 金牌影院
+DOMAIN-SUFFIX,jiabaide.cn
+
+# 哔滴影视
+DOMAIN,v.xl01.eu.cc
+
+# 欧乐
+DOMAIN-SUFFIX,olelive.com
+
+# 在线之家
+DOMAIN-SUFFIX,zxzj.run
+
+# 4K-AV
+DOMAIN-SUFFIX,4kmp.com
+
+# 燒火電影
+DOMAIN-SUFFIX,shdy2.com
+
+# NO視頻
+DOMAIN-SUFFIX,novipnoad.net
+
+# 星芽短劇
+DOMAIN-SUFFIX,whjzjx.cn
+DOMAIN-SUFFIX,shytkjgs.com
+
+# 瓜子
+DOMAIN-SUFFIX,rmedphk.com
+
+# 愛壹帆
+DOMAIN-SUFFIX,iyf.tv
+
+# 影视天堂
+DOMAIN-SUFFIX,ysttv.com
+
+# 荐片
+DOMAIN,api.ztcgi.com
+DOMAIN,img.jgsfnl.com
+
+# Anime1
+DOMAIN-SUFFIX,anime1.me
+
+# 七色番動漫
+DOMAIN-SUFFIX,7sefun.top
+DOMAIN-SUFFIX,7sefun.com
+DOMAIN,dp.no3acg.com
+DOMAIN,jx.jsonplayer.com
+DOMAIN,mf.qiau.cn
+
+# PPNIX
+DOMAIN-SUFFIX,ppnix.com
+
+# 河馬短劇
+DOMAIN-SUFFIX,kuaikaw.cn
+
+# 永樂視頻
+DOMAIN-SUFFIX,ylys.tv
+
+# 人人电影网
+DOMAIN-SUFFIX,rrdynb.com
+
+# 瓜子 Web
+DOMAIN,haiwaiapi.1fc8ab0.com
+
+# ギリギリ动漫 APP
+DOMAIN,m3u8.girigirilove.com
+
+# 次元方舟播放器
+DOMAIN,playvod.manzhanw.top
+
+# ========================
+# 常用网页影视站
+# ========================
+
+# 七味
+DOMAIN-SUFFIX,pkavi.com
+
+# LIBVIO
+DOMAIN-SUFFIX,libvio.in
+
+# 飞快TV
+DOMAIN-SUFFIX,feikuai.in
+
+# 小宝影院
+DOMAIN-SUFFIX,xiaoheimi.cc
+
+# 可可影视
+DOMAIN-SUFFIX,kkys02.com
+
+# Vidhub
+DOMAIN-SUFFIX,vidhub3.top
+
+# 唐人街影院
+DOMAIN-SUFFIX,trjvod.com
+
+# 爱电影
+DOMAIN-SUFFIX,y2s52n7.com
+
+# 美剧2046
+DOMAIN-SUFFIX,mj2046.cc
