@@ -11,7 +11,7 @@ Dowon Surge 是一套基于成熟 Surge 配置裁剪并加入个人路由逻辑�
 - 结构性 `Fail Closed = reject`，用于阻止空组触发 Surge `SUBSTITUTE(DIRECT)`；
 - `其他节点` 手动组；
 - `Entry`；
-- Sub-Store 内联支持；
+- Sub-Store 官方 Surge 模块配合；
 - `Korea VPS` / `USA VPS` 从本机 Sub-Store 读取 `ss://` 并转换为 Surge；
 - `VPS Exit`；
 - `Entry → VPS` 链式代理；
@@ -39,16 +39,22 @@ Mac Beta 已实际发现 Surge 在策略组无可用成员时会使用 `SUBSTITU
 
 真实订阅 URL/Token 不进入 GitHub。
 
-## VPS：改用 Sub-Store
+## VPS：改用 Sub-Store 官方模块
 
-不需要再在 Surge 里手填 SS 的 IP、端口、加密方式和密码。
+Dowon 主配置不再内联 Sub-Store 的 Script/MITM。Sub-Store 由 Surge 的官方模块单独安装和更新，主配置只负责安全映射与读取本地输出。
 
-更新配置后：
-1. 在 Surge 中安装并信任 MITM 根证书；
-2. Safari 打开 `https://sub.store`；
-3. 新建本地单订阅 `Korea-VPS`，粘贴韩国 VPS 的完整 `ss://`；
-4. 新建本地单订阅 `USA-VPS`，粘贴美国 VPS 的完整 `ss://`；
-5. Surge 会通过本机 Sub-Store 输出自动生成可用的 Surge 节点。
+官方模块 URL：
+
+```text
+https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule
+```
+
+首次使用：
+1. 在 Surge 的模块页面安装并启用上面的官方 Sub-Store 模块；
+2. 安装并信任 Surge MITM 根证书；
+3. 用 Safari 打开 `https://sub.store`，确认进入 Sub-Store；
+4. 新建本地单订阅 `Korea-VPS`，粘贴韩国 VPS 的完整 `ss://`；
+5. 新建本地单订阅 `USA-VPS`，粘贴美国 VPS 的完整 `ss://`。
 
 主配置读取：
 
@@ -57,14 +63,14 @@ https://sub.store/download/Korea-VPS/Surge
 https://sub.store/download/USA-VPS/Surge
 ```
 
-配置还包含：
+主配置继续保留：
 
 ```ini
 [Host]
 sub.store = 127.0.0.1
 ```
 
-这是安全保护：如果 Sub-Store 脚本没有接管，请求留在本机失败，不把本地订阅数据误发到公网 `sub.store`。
+这是安全保护：如果官方模块没有接管请求，访问会留在本机失败，而不是把本地 Sub-Store 请求误发到公网 `sub.store`。
 
 ## DNS 隐私
 
@@ -121,7 +127,7 @@ video.list           → Video Exit
 ## Beta 提醒
 
 这仍然是 Beta。下一步需要在 Mac/iPhone Surge 实测：
-- Sub-Store 页面是否正常；
+- Sub-Store 官方模块是否正常启用，Safari 能否打开本地 `https://sub.store`；
 - `Korea-VPS` / `USA-VPS` 是否能从 ss:// 正确输出；
 - Entry → VPS 链式实际出口；
 - 机场订阅失效或地区零匹配时是否保持 REJECT 而不是 DIRECT；
