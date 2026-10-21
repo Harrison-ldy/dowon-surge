@@ -77,7 +77,16 @@ encrypted-dns-server = https://1.1.1.1/dns-query
 encrypted-dns-follow-outbound-mode = true
 ```
 
-并配合活动 RULE-SET 的 `no-resolve`：
+并配合活动 RULE-SET 的 `no-resolve`，以及 China Direct 专用系统 DNS 映射：
+
+```ini
+[Host]
+RULE-SET:https://raw.githubusercontent.com/Harrison-ldy/dowon-surge/main/rules/china-direct.list = server:system
+```
+
+作用：命中 `china-direct.list` 的域名在真正建立 DIRECT 连接时，使用当前网络的系统 DNS；韩国日常得到韩国本地解析，中国旅行时得到中国本地解析/CDN 结果。其余 Surge 主动 upstream DNS 仍使用 Cloudflare DoH。
+
+
 - `no-resolve`：减少规则匹配阶段不必要的提前 DNS；
 - `hijack-dns = *:53`：接管 App 硬编码的传统 53 端口 DNS；
 - Cloudflare DoH：Surge 真正需要上游 DNS 时使用加密查询；
