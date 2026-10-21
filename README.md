@@ -66,6 +66,25 @@ sub.store = 127.0.0.1
 
 这是安全保护：如果 Sub-Store 脚本没有接管，请求留在本机失败，不把本地订阅数据误发到公网 `sub.store`。
 
+## DNS 隐私
+
+当前 Beta 使用：
+
+```ini
+dns-server = system
+hijack-dns = *:53
+encrypted-dns-server = https://1.1.1.1/dns-query
+encrypted-dns-follow-outbound-mode = true
+```
+
+并配合活动 RULE-SET 的 `no-resolve`：
+- `no-resolve`：减少规则匹配阶段不必要的提前 DNS；
+- `hijack-dns = *:53`：接管 App 硬编码的传统 53 端口 DNS；
+- Cloudflare DoH：Surge 真正需要上游 DNS 时使用加密查询；
+- 加密 DNS 跟随出站规则，不强制 DIRECT。
+
+没有启用任何跳过加密 DNS TLS 证书验证的选项。
+
 ## Fail-Closed
 
 地区自动组现在使用 `url-test + Fail Closed + evaluate-before-use=true`。这是因为 Mac Beta 已实测空组会 DIRECT，不再继续沿用原来的空 `smart` 风险。
