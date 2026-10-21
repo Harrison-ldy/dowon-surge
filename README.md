@@ -72,7 +72,7 @@ Device → Entry → selected VPS → Internet
 dns-server = system
 hijack-dns = *:53
 encrypted-dns-server = https://1.1.1.1/dns-query
-encrypted-dns-follow-outbound-mode = true
+encrypted-dns-follow-outbound-mode = false
 ```
 
 并配合活动 RULE-SET 的 `no-resolve`，以及 China Direct 专用系统 DNS 映射：
@@ -88,7 +88,7 @@ RULE-SET:https://raw.githubusercontent.com/Harrison-ldy/dowon-surge/main/rules/c
 - `no-resolve`：减少规则匹配阶段不必要的提前 DNS；
 - `hijack-dns = *:53`：接管 App 硬编码的传统 53 端口 DNS；
 - Cloudflare DoH：Surge 真正需要上游 DNS 时使用加密查询；
-- 加密 DNS 跟随出站规则，不强制 DIRECT。
+- 加密 DNS 连接自身直接出站，避免代理节点域名解析与 `Entry → VPS` 链式形成启动循环；DNS 查询内容仍通过 HTTPS 加密。
 
 没有启用任何跳过加密 DNS TLS 证书验证的选项。
 
