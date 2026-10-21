@@ -1,0 +1,9 @@
+# Dowon Surge - China Direct
+#
+# 仅添加明确希望直连的中国网站。
+# 不使用 China / ChinaCIDR / GEOIP,CN 大范围直连规则。
+#
+# RULE-SET 文件这里只写规则条件，不写策略名；主配置统一指定 DIRECT。
+#
+# Example:
+# DOMAIN-SUFFIX,example.cn

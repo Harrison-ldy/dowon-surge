@@ -1,0 +1,10 @@
+# Dowon Surge - Video
+#
+# 用户明确指定的视频服务域名。
+# 匹配后统一交给主配置中的 Video Exit。
+#
+# 不继承大而全的 Netflix / Disney / GlobalMedia 规则。
+# 实际域名在使用中确认后再添加，不猜测。
+#
+# Example:
+# DOMAIN-SUFFIX,example.com
