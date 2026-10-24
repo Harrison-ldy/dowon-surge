@@ -714,15 +714,15 @@ DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 
 # === 其他大陆服务／待细分 (6) ===
-# c-t.work | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+# c-t.work | 奶牛快传｜文件传输服务
 DOMAIN-SUFFIX,c-t.work
-# caiyunapp.com | 网站／App 的图片、CDN 或云资源（具体归属待进一步核查）
+# caiyunapp.com | 彩云天气｜天气预报
 DOMAIN-SUFFIX,caiyunapp.com
-# cowtransfer.com | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+# cowtransfer.com | 奶牛快传｜文件传输服务
 DOMAIN-SUFFIX,cowtransfer.com
-# pingan.com | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+# pingan.com | 中国平安｜金融保险
 DOMAIN-SUFFIX,pingan.com
-# xhscdn.com | 网站／App 的图片、CDN 或云资源（具体归属待进一步核查）
+# xhscdn.com | 小红书｜图像与 CDN 资源
 DOMAIN-SUFFIX,xhscdn.com
-# xiaohongshu.com | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+# xiaohongshu.com | 小红书｜生活分享社区
 DOMAIN-SUFFIX,xiaohongshu.com
