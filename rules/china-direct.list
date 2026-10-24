@@ -1,9 +1,728 @@
-# Dowon Surge - China Direct
-#
-# 仅添加明确希望直连的中国网站。
-# 不使用 China / ChinaCIDR / GEOIP,CN 大范围直连规则。
-#
-# RULE-SET 文件这里只写规则条件，不写策略名；主配置统一指定 DIRECT。
-#
-# Example:
-# DOMAIN-SUFFIX,example.cn
+# Dowon Surge | Mainland China vendor-only DIRECT whitelist
+# 2026-10-24 v1 | 353 DOMAIN-SUFFIX rules | Source pool: 365 exact four-way matches
+# Mainland China-operated vendors/institutions only; omit overseas/HK/TW providers and uncertain ownership.
+# This is a Surge RULE-SET: NO policy names here; main config specifies DIRECT and Host server:system.
+# Match behavior: DOMAIN-SUFFIX includes all subdomains. Rule entries are manually reviewed, NOT auto-imported from upstream.
+# NOTE: annotations marked '待复核' are service-level metadata needing extra research, NOT proof of ownership.
+
+# === 运营商／银行／官方机构 (24) ===
+# 10010.com | 中国联通
+DOMAIN-SUFFIX,10010.com
+# 12306.com | 铁路12306
+DOMAIN-SUFFIX,12306.com
+# 139.com | 中国移动
+DOMAIN-SUFFIX,139.com
+# 1905.com | 央视／国家媒体
+DOMAIN-SUFFIX,1905.com
+# 21cn.com | 中国电信
+DOMAIN-SUFFIX,21cn.com
+# 95516.com | 中国银联
+DOMAIN-SUFFIX,95516.com
+# 95588.com | 工商银行
+DOMAIN-SUFFIX,95588.com
+# abchina.com | 农业银行
+DOMAIN-SUFFIX,abchina.com
+# ccb.com | 建设银行
+DOMAIN-SUFFIX,ccb.com
+# cctv.com | 央视／国家媒体
+DOMAIN-SUFFIX,cctv.com
+# cctvpic.com | 央视／国家媒体
+DOMAIN-SUFFIX,cctvpic.com
+# chinalive.com | 央视／国家媒体
+DOMAIN-SUFFIX,chinalive.com
+# chinamobile.com | 中国移动
+DOMAIN-SUFFIX,chinamobile.com
+# chinaso.com | 中国搜索
+DOMAIN-SUFFIX,chinaso.com
+# cmbchina.com | 招商银行／招银
+DOMAIN-SUFFIX,cmbchina.com
+# cmbimg.com | 招商银行／招银
+DOMAIN-SUFFIX,cmbimg.com
+# cmfchina.com | 招商银行／招银
+DOMAIN-SUFFIX,cmfchina.com
+# cmpassport.com | 中国移动
+DOMAIN-SUFFIX,cmpassport.com
+# ipanda.com | 央视／国家媒体
+DOMAIN-SUFFIX,ipanda.com
+# ipanda.net | 央视／国家媒体
+DOMAIN-SUFFIX,ipanda.net
+# livechina.com | 央视／国家媒体
+DOMAIN-SUFFIX,livechina.com
+# psbc.com | 邮储银行
+DOMAIN-SUFFIX,psbc.com
+# unionpay.com | 中国银联
+DOMAIN-SUFFIX,unionpay.com
+# xinhuanet.com | 新华网
+DOMAIN-SUFFIX,xinhuanet.com
+
+# === 手机硬件／游戏／内容视频 (91) ===
+# 115.com | 115网盘
+DOMAIN-SUFFIX,115.com
+# 115cdn.com | 115网盘
+DOMAIN-SUFFIX,115cdn.com
+# 115cdn.net | 115网盘
+DOMAIN-SUFFIX,115cdn.net
+# 115img.com | 115网盘
+DOMAIN-SUFFIX,115img.com
+# 123pan.com | 123云盘
+DOMAIN-SUFFIX,123pan.com
+# 56.com | 搜狐视频／56
+DOMAIN-SUFFIX,56.com
+# aixifan.com | AcFun
+DOMAIN-SUFFIX,aixifan.com
+# benghuai.com | 米哈游／原神／崩坏
+DOMAIN-SUFFIX,benghuai.com
+# bh3.com | 米哈游／原神／崩坏
+DOMAIN-SUFFIX,bh3.com
+# ccgslb.com | 网宿科技／CDN
+DOMAIN-SUFFIX,ccgslb.com
+# ccgslb.net | 网宿科技／CDN
+DOMAIN-SUFFIX,ccgslb.net
+# changyan.com | 搜狐视频／56
+DOMAIN-SUFFIX,changyan.com
+# chinanetcenter.com | 网宿科技／CDN
+DOMAIN-SUFFIX,chinanetcenter.com
+# chushou.tv | 触手直播
+DOMAIN-SUFFIX,chushou.tv
+# coloros.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,coloros.com
+# dbank.com | 华为／荣耀及云
+DOMAIN-SUFFIX,dbank.com
+# dbankcdn.com | 华为／荣耀及云
+DOMAIN-SUFFIX,dbankcdn.com
+# dbankcloud.com | 华为／荣耀及云
+DOMAIN-SUFFIX,dbankcloud.com
+# docer.com | 金山办公
+DOMAIN-SUFFIX,docer.com
+# douyu.com | 斗鱼
+DOMAIN-SUFFIX,douyu.com
+# douyu.tv | 斗鱼
+DOMAIN-SUFFIX,douyu.tv
+# douyuscdn.com | 斗鱼
+DOMAIN-SUFFIX,douyuscdn.com
+# douyutv.com | 斗鱼
+DOMAIN-SUFFIX,douyutv.com
+# fun.tv | 风行
+DOMAIN-SUFFIX,fun.tv
+# funshion.com | 风行
+DOMAIN-SUFFIX,funshion.com
+# heytap.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,heytap.com
+# heytapcs.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,heytapcs.com
+# heytapdownload.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,heytapdownload.com
+# heytapimage.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,heytapimage.com
+# heytapmobi.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,heytapmobi.com
+# hicloud.com | 华为／荣耀及云
+DOMAIN-SUFFIX,hicloud.com
+# hihonor.com | 华为／荣耀及云
+DOMAIN-SUFFIX,hihonor.com
+# hitv.com | 芒果TV
+DOMAIN-SUFFIX,hitv.com
+# huawei.com | 华为／荣耀及云
+DOMAIN-SUFFIX,huawei.com
+# huaweistatic.com | 华为／荣耀及云
+DOMAIN-SUFFIX,huaweistatic.com
+# huya.com | 虎牙
+DOMAIN-SUFFIX,huya.com
+# hwccpc.com | 华为／荣耀及云
+DOMAIN-SUFFIX,hwccpc.com
+# iqiyi.com | 爱奇艺／PPS
+DOMAIN-SUFFIX,iqiyi.com
+# iqiyipic.com | 爱奇艺／PPS
+DOMAIN-SUFFIX,iqiyipic.com
+# ksmobile.com | 猎豹移动
+DOMAIN-SUFFIX,ksmobile.com
+# ksord.com | 金山办公
+DOMAIN-SUFFIX,ksord.com
+# ksosoft.com | 金山办公
+DOMAIN-SUFFIX,ksosoft.com
+# ksyun.com | 金山云
+DOMAIN-SUFFIX,ksyun.com
+# ku6.com | 酷6
+DOMAIN-SUFFIX,ku6.com
+# kugou.com | 酷狗
+DOMAIN-SUFFIX,kugou.com
+# le.com | 乐视
+DOMAIN-SUFFIX,le.com
+# letvimg.com | 乐视
+DOMAIN-SUFFIX,letvimg.com
+# meipai.com | 美图／美拍
+DOMAIN-SUFFIX,meipai.com
+# meitu.com | 美图／美拍
+DOMAIN-SUFFIX,meitu.com
+# meitudata.com | 美图／美拍
+DOMAIN-SUFFIX,meitudata.com
+# meitustat.com | 美图／美拍
+DOMAIN-SUFFIX,meitustat.com
+# meizu.com | 魅族
+DOMAIN-SUFFIX,meizu.com
+# mgtv.com | 芒果TV
+DOMAIN-SUFFIX,mgtv.com
+# migucloud.com | 咪咕视频
+DOMAIN-SUFFIX,migucloud.com
+# miguvideo.com | 咪咕视频
+DOMAIN-SUFFIX,miguvideo.com
+# mihayo.com | 米哈游／原神／崩坏
+DOMAIN-SUFFIX,mihayo.com
+# mihoyo.com | 米哈游／原神／崩坏
+DOMAIN-SUFFIX,mihoyo.com
+# miyoushe.com | 米哈游／原神／崩坏
+DOMAIN-SUFFIX,miyoushe.com
+# msstatic.com | 虎牙
+DOMAIN-SUFFIX,msstatic.com
+# myoppo.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,myoppo.com
+# mzres.com | 魅族
+DOMAIN-SUFFIX,mzres.com
+# oneplusbbs.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,oneplusbbs.com
+# oppo.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,oppo.com
+# oppoer.me | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,oppoer.me
+# oppomobile.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,oppomobile.com
+# oppopay.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,oppopay.com
+# ourdvs.com | 网宿科技／CDN
+DOMAIN-SUFFIX,ourdvs.com
+# pplive.com | PPTV
+DOMAIN-SUFFIX,pplive.com
+# pps.tv | 爱奇艺／PPS
+DOMAIN-SUFFIX,pps.tv
+# ppsimg.com | 爱奇艺／PPS
+DOMAIN-SUFFIX,ppsimg.com
+# pptv.com | PPTV
+DOMAIN-SUFFIX,pptv.com
+# qbox.me | 七牛云
+DOMAIN-SUFFIX,qbox.me
+# qiniu.com | 七牛云
+DOMAIN-SUFFIX,qiniu.com
+# qiyi.com | 爱奇艺／PPS
+DOMAIN-SUFFIX,qiyi.com
+# qiyipic.com | 爱奇艺／PPS
+DOMAIN-SUFFIX,qiyipic.com
+# realmebbs.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,realmebbs.com
+# realmemobile.com | OPPO／HeyTap／一加／realme
+DOMAIN-SUFFIX,realmemobile.com
+# sandai.net | 迅雷
+DOMAIN-SUFFIX,sandai.net
+# sohu-inc.com | 搜狐视频／56
+DOMAIN-SUFFIX,sohu-inc.com
+# sohu.com | 搜狐视频／56
+DOMAIN-SUFFIX,sohu.com
+# sohucs.com | 搜狐视频／56
+DOMAIN-SUFFIX,sohucs.com
+# upaiyun.com | 又拍云
+DOMAIN-SUFFIX,upaiyun.com
+# upyun.com | 又拍云
+DOMAIN-SUFFIX,upyun.com
+# v-56.com | 搜狐视频／56
+DOMAIN-SUFFIX,v-56.com
+# vmall.com | 华为／荣耀及云
+DOMAIN-SUFFIX,vmall.com
+# vmallres.com | 华为／荣耀及云
+DOMAIN-SUFFIX,vmallres.com
+# wangsu.com | 网宿科技／CDN
+DOMAIN-SUFFIX,wangsu.com
+# xunlei.com | 迅雷
+DOMAIN-SUFFIX,xunlei.com
+# xycloud.com | 迅雷
+DOMAIN-SUFFIX,xycloud.com
+# yuanshen.com | 米哈游／原神／崩坏
+DOMAIN-SUFFIX,yuanshen.com
+# yy.com | YY直播
+DOMAIN-SUFFIX,yy.com
+
+# === 字节跳动／腾讯／网易／快手 (65) ===
+# 126.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,126.com
+# 126.net | 网易／邮箱／内容
+DOMAIN-SUFFIX,126.net
+# 127.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,127.com
+# 127.net | 网易／邮箱／内容
+DOMAIN-SUFFIX,127.net
+# 163.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,163.com
+# 163yun.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,163yun.com
+# 166.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,166.com
+# 166.net | 网易／邮箱／内容
+DOMAIN-SUFFIX,166.net
+# 178.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,178.com
+# 188.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,188.com
+# amemv.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,amemv.com
+# bytedance.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,bytedance.com
+# bytedance.net | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,bytedance.net
+# bytegoofy.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,bytegoofy.com
+# byteimg.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,byteimg.com
+# coding.me | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,coding.me
+# coding.net | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,coding.net
+# douyin.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,douyin.com
+# douyincdn.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,douyincdn.com
+# douyinpic.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,douyinpic.com
+# douyinstatic.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,douyinstatic.com
+# douyinvod.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,douyinvod.com
+# duokanbox.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,duokanbox.com
+# fqnovel.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,fqnovel.com
+# fqnovelpic.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,fqnovelpic.com
+# gifshow.com | 快手／GIF快手
+DOMAIN-SUFFIX,gifshow.com
+# gtimg.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,gtimg.com
+# hongxiu.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,hongxiu.com
+# huoshan.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,huoshan.com
+# huoshanzhibo.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,huoshanzhibo.com
+# icourse163.org | 网易／邮箱／内容
+DOMAIN-SUFFIX,icourse163.org
+# idqqimg.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,idqqimg.com
+# iesdouyin.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,iesdouyin.com
+# ixigua.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,ixigua.com
+# ks-cdn.com | 快手／GIF快手
+DOMAIN-SUFFIX,ks-cdn.com
+# ksapisrv.com | 快手／GIF快手
+DOMAIN-SUFFIX,ksapisrv.com
+# kuaishou.com | 快手／GIF快手
+DOMAIN-SUFFIX,kuaishou.com
+# kuaishouzt.com | 快手／GIF快手
+DOMAIN-SUFFIX,kuaishouzt.com
+# lofter.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,lofter.com
+# myapp.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,myapp.com
+# myqcloud.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,myqcloud.com
+# netease.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,netease.com
+# netease.im | 网易／邮箱／内容
+DOMAIN-SUFFIX,netease.im
+# pstatp.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,pstatp.com
+# qidian.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,qidian.com
+# qq.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,qq.com
+# qqmail.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,qqmail.com
+# qqurl.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,qqurl.com
+# smtcdns.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,smtcdns.com
+# smtcdns.net | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,smtcdns.net
+# snssdk.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,snssdk.com
+# tencent-cloud.net | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,tencent-cloud.net
+# tencent.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,tencent.com
+# tencentmusic.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,tencentmusic.com
+# tenpay.com | 腾讯／QQ／云／支付
+DOMAIN-SUFFIX,tenpay.com
+# toutiao.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,toutiao.com
+# toutiaocloud.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,toutiaocloud.com
+# toutiaoimg.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,toutiaoimg.com
+# toutiaopage.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,toutiaopage.com
+# toutiaostatic.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,toutiaostatic.com
+# yeah.net | 网易／邮箱／内容
+DOMAIN-SUFFIX,yeah.net
+# youdao.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,youdao.com
+# yuewen.com | 网易／邮箱／内容
+DOMAIN-SUFFIX,yuewen.com
+# yximgs.com | 快手／GIF快手
+DOMAIN-SUFFIX,yximgs.com
+# zijieapi.com | 字节跳动／抖音／头条
+DOMAIN-SUFFIX,zijieapi.com
+
+# === 其他中国业务 (62) ===
+# 2288.org | 中国网站服务／旧域名（具体业务待后续核查）
+DOMAIN-SUFFIX,2288.org
+# 263.net | 263.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,263.net
+# 3322.org | 3322.org 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,3322.org
+# 360in.com | 360in.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,360in.com
+# 3dmgame.com | 3dmgame.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,3dmgame.com
+# 4399.com | 4399.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,4399.com
+# 8686c.com | 国内 CDN／静态资源服务（具体厂商待复核）
+DOMAIN-SUFFIX,8686c.com
+# aicdn.com | 国内内容分发／图片资源（具体厂商待复核）
+DOMAIN-SUFFIX,aicdn.com
+# ali213.net | ali213.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ali213.net
+# camera360.com | camera360.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,camera360.com
+# china.com | china.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,china.com
+# chuimg.com | 中国站点图片静态资源（具体厂商待复核）
+DOMAIN-SUFFIX,chuimg.com
+# chunyu.mobi | chunyu.mobi 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,chunyu.mobi
+# ctfile.com | ctfile.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ctfile.com
+# cz88.net | cz88.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,cz88.net
+# daocloud.io | daocloud.io 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,daocloud.io
+# donews.com | donews.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,donews.com
+# duba.net | duba.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,duba.net
+# dxycdn.com | dxycdn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,dxycdn.com
+# feng.com | feng.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,feng.com
+# fengkongcloud.com | fengkongcloud.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,fengkongcloud.com
+# gamersky.com | gamersky.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,gamersky.com
+# geetest.com | geetest.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,geetest.com
+# geilicdn.com | 国内 CDN／静态资源（具体厂商待复核）
+DOMAIN-SUFFIX,geilicdn.com
+# gotokeep.com | gotokeep.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,gotokeep.com
+# haowu.link | 国内内容分享／短链接服务（具体运营主体待复核）
+DOMAIN-SUFFIX,haowu.link
+# igamecj.com | 中国游戏相关平台／静态资源（待复核）
+DOMAIN-SUFFIX,igamecj.com
+# ip138.com | ip138.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ip138.com
+# ipip.net | ipip.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ipip.net
+# kaiyanapp.com | kaiyanapp.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,kaiyanapp.com
+# keepcdn.com | keepcdn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,keepcdn.com
+# kkmh.com | kkmh.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,kkmh.com
+# lagou.com | lagou.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,lagou.com
+# landian.vip | landian.vip 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,landian.vip
+# landiannews.com | landiannews.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,landiannews.com
+# ludashi.com | ludashi.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ludashi.com
+# myzaker.com | myzaker.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,myzaker.com
+# oray.com | oray.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,oray.com
+# pubyun.com | pubyun.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,pubyun.com
+# qcc.com | qcc.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,qcc.com
+# qichacha.com | qichacha.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,qichacha.com
+# qixin.com | qixin.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,qixin.com
+# qy.net | 中国业务域名（具体服务待复核）
+DOMAIN-SUFFIX,qy.net
+# qyer.com | qyer.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,qyer.com
+# qyerstatic.com | qyerstatic.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,qyerstatic.com
+# ronghub.com | ronghub.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ronghub.com
+# ruguoapp.com | ruguoapp.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ruguoapp.com
+# szbdyd.com | 中国业务域名（具体服务待复核）
+DOMAIN-SUFFIX,szbdyd.com
+# tapimg.com | TapTap 游戏平台图片资源
+DOMAIN-SUFFIX,tapimg.com
+# tianyancha.com | tianyancha.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,tianyancha.com
+# variflight.com | variflight.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,variflight.com
+# veryzhun.com | veryzhun.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,veryzhun.com
+# xiachufang.com | xiachufang.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,xiachufang.com
+# ximalaya.com | ximalaya.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ximalaya.com
+# xmcdn.com | xmcdn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,xmcdn.com
+# xycdn.com | 中国 CDN／资源分发（具体厂商待复核）
+DOMAIN-SUFFIX,xycdn.com
+# ydstatic.com | ydstatic.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ydstatic.com
+# yinxiang.com | yinxiang.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,yinxiang.com
+# youzanyun.com | youzanyun.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,youzanyun.com
+# yupoo.com | yupoo.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,yupoo.com
+# zhipin.com | zhipin.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,zhipin.com
+# zhuanzfx.com | zhuanzfx.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,zhuanzfx.com
+
+# === 互联网平台／电商／出行 (42) ===
+# 360buyimg.com | 京东电商／支付／云
+DOMAIN-SUFFIX,360buyimg.com
+# 58.com | 58同城
+DOMAIN-SUFFIX,58.com
+# anjuke.com | 链家／房产
+DOMAIN-SUFFIX,anjuke.com
+# baixing.com | 百姓网
+DOMAIN-SUFFIX,baixing.com
+# baixing.net | 百姓网
+DOMAIN-SUFFIX,baixing.net
+# c-ctrip.com | 携程旅行
+DOMAIN-SUFFIX,c-ctrip.com
+# ctrip.com | 携程旅行
+DOMAIN-SUFFIX,ctrip.com
+# dangdang.com | 当当
+DOMAIN-SUFFIX,dangdang.com
+# dianping.com | 美团／大众点评／猫眼
+DOMAIN-SUFFIX,dianping.com
+# didialift.com | 滴滴出行
+DOMAIN-SUFFIX,didialift.com
+# didichuxing.com | 滴滴出行
+DOMAIN-SUFFIX,didichuxing.com
+# didiglobal.com | 滴滴出行
+DOMAIN-SUFFIX,didiglobal.com
+# didistatic.com | 滴滴出行
+DOMAIN-SUFFIX,didistatic.com
+# dpfile.com | 美团／大众点评／猫眼
+DOMAIN-SUFFIX,dpfile.com
+# fang.com | 链家／房产
+DOMAIN-SUFFIX,fang.com
+# hwtrip.com | 携程旅行
+DOMAIN-SUFFIX,hwtrip.com
+# jcloudcache.com | 京东电商／支付／云
+DOMAIN-SUFFIX,jcloudcache.com
+# jd.com | 京东电商／支付／云
+DOMAIN-SUFFIX,jd.com
+# jd.hk | 京东电商／支付／云
+DOMAIN-SUFFIX,jd.hk
+# jdcache.com | 京东电商／支付／云
+DOMAIN-SUFFIX,jdcache.com
+# jdcdn.com | 京东电商／支付／云
+DOMAIN-SUFFIX,jdcdn.com
+# jdcloud.com | 京东电商／支付／云
+DOMAIN-SUFFIX,jdcloud.com
+# jdpay.com | 京东电商／支付／云
+DOMAIN-SUFFIX,jdpay.com
+# lianjia.com | 链家／房产
+DOMAIN-SUFFIX,lianjia.com
+# ljcdn.com | 链家／房产
+DOMAIN-SUFFIX,ljcdn.com
+# lkcoffee.com | 瑞幸咖啡
+DOMAIN-SUFFIX,lkcoffee.com
+# luckincoffeecdn.com | 瑞幸咖啡静态资源
+DOMAIN-SUFFIX,luckincoffeecdn.com
+# maoyan.com | 美团／大众点评／猫眼
+DOMAIN-SUFFIX,maoyan.com
+# meituan.com | 美团／大众点评／猫眼
+DOMAIN-SUFFIX,meituan.com
+# meituan.net | 美团／大众点评／猫眼
+DOMAIN-SUFFIX,meituan.net
+# mobike.com | 摩拜单车
+DOMAIN-SUFFIX,mobike.com
+# mtyun.com | 美团／大众点评／猫眼
+DOMAIN-SUFFIX,mtyun.com
+# pddpic.com | 拼多多
+DOMAIN-SUFFIX,pddpic.com
+# pinduoduo.com | 拼多多
+DOMAIN-SUFFIX,pinduoduo.com
+# pinduoduo.net | 拼多多
+DOMAIN-SUFFIX,pinduoduo.net
+# sankuai.com | 美团／大众点评／猫眼
+DOMAIN-SUFFIX,sankuai.com
+# soufunimg.com | 链家／房产
+DOMAIN-SUFFIX,soufunimg.com
+# suning.com | 苏宁
+DOMAIN-SUFFIX,suning.com
+# udache.com | 滴滴出行
+DOMAIN-SUFFIX,udache.com
+# vip.com | 唯品会
+DOMAIN-SUFFIX,vip.com
+# weidian.com | 微店
+DOMAIN-SUFFIX,weidian.com
+# yangkeduo.com | 拼多多
+DOMAIN-SUFFIX,yangkeduo.com
+
+# === 教育／生产力／文档 (13) ===
+# 360doc.com | 360doc.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,360doc.com
+# chaoxing.com | chaoxing.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,chaoxing.com
+# chaoxingv.com | chaoxingv.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,chaoxingv.com
+# dida365.com | dida365.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,dida365.com
+# docin.com | docin.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,docin.com
+# eudic.net | eudic.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,eudic.net
+# frdic.com | frdic.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,frdic.com
+# godic.net | godic.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,godic.net
+# iciba.com | iciba.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,iciba.com
+# jianshu.com | jianshu.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,jianshu.com
+# jianshu.io | jianshu.io 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,jianshu.io
+# luojilab.com | luojilab.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,luojilab.com
+# mubu.com | mubu.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,mubu.com
+
+# === 新闻媒体／社区／科技 (50) ===
+# 36kr.com | 36kr.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,36kr.com
+# 36krcdn.com | 36krcdn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,36krcdn.com
+# 39.net | 39.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,39.net
+# 51cto.com | 51cto.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,51cto.com
+# cailianpress.com | cailianpress.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,cailianpress.com
+# chinaz.com | chinaz.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,chinaz.com
+# chiphell.com | chiphell.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,chiphell.com
+# cnblogs.com | cnblogs.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,cnblogs.com
+# coolapk.com | coolapk.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,coolapk.com
+# coolapkmarket.com | coolapkmarket.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,coolapkmarket.com
+# coolapkmarket.net | coolapkmarket.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,coolapkmarket.net
+# csdn.com | csdn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,csdn.com
+# csdn.net | csdn.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,csdn.net
+# dfcfw.com | dfcfw.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,dfcfw.com
+# douban.com | douban.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,douban.com
+# douban.fm | douban.fm 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,douban.fm
+# doubanio.com | doubanio.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,doubanio.com
+# eastmoney.com | eastmoney.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,eastmoney.com
+# gitcode.com | gitcode.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,gitcode.com
+# gitee.com | gitee.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,gitee.com
+# gitee.io | gitee.io 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,gitee.io
+# huanqiu.com | huanqiu.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,huanqiu.com
+# hupu.com | hupu.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,hupu.com
+# huxiu.com | huxiu.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,huxiu.com
+# huxiucdn.com | huxiucdn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,huxiucdn.com
+# ifeng.com | ifeng.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ifeng.com
+# ifengimg.com | ifengimg.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ifengimg.com
+# ithome.com | ithome.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ithome.com
+# jiemian.com | jiemian.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,jiemian.com
+# ngabbs.com | ngabbs.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ngabbs.com
+# oschina.net | oschina.net 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,oschina.net
+# pingwest.com | pingwest.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,pingwest.com
+# qdaily.com | qdaily.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,qdaily.com
+# ruanmei.com | ruanmei.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,ruanmei.com
+# segmentfault.com | segmentfault.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,segmentfault.com
+# sifou.com | sifou.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,sifou.com
+# sina.com | sina.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,sina.com
+# sinaapp.com | sinaapp.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,sinaapp.com
+# sinaedge.com | sinaedge.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,sinaedge.com
+# sinaimg.com | sinaimg.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,sinaimg.com
+# smzdm.com | smzdm.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,smzdm.com
+# solidot.org | solidot.org 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,solidot.org
+# sspai.com | sspai.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,sspai.com
+# wallstreetcn.com | wallstreetcn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,wallstreetcn.com
+# weibo.com | weibo.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,weibo.com
+# weibocdn.com | weibocdn.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,weibocdn.com
+# yicai.com | yicai.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,yicai.com
+# zdmimg.com | zdmimg.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,zdmimg.com
+# zhihu.com | zhihu.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,zhihu.com
+# zhimg.com | zhimg.com 对应中国网站／App 或其静态资源（服务细分待维护）
+DOMAIN-SUFFIX,zhimg.com
+
+# === 其他大陆服务／待细分 (6) ===
+# c-t.work | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+DOMAIN-SUFFIX,c-t.work
+# caiyunapp.com | 网站／App 的图片、CDN 或云资源（具体归属待进一步核查）
+DOMAIN-SUFFIX,caiyunapp.com
+# cowtransfer.com | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+DOMAIN-SUFFIX,cowtransfer.com
+# pingan.com | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+DOMAIN-SUFFIX,pingan.com
+# xhscdn.com | 网站／App 的图片、CDN 或云资源（具体归属待进一步核查）
+DOMAIN-SUFFIX,xhscdn.com
+# xiaohongshu.com | 中国网站／应用相关域名（具体产品或归属待进一步核查）
+DOMAIN-SUFFIX,xiaohongshu.com
