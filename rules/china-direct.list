@@ -1,5 +1,5 @@
 # Dowon Surge | Mainland China vendor-only DIRECT whitelist
-# 2026-10-24 v1 | 353 DOMAIN-SUFFIX rules | Source pool: 365 exact four-way matches
+# 2026-10-24 v1.1 | 399 DOMAIN-SUFFIX rules | Base 353 from four-way review + 46 installed-App supplements
 # Mainland China-operated vendors/institutions only; omit overseas/HK/TW providers and uncertain ownership.
 # This is a Surge RULE-SET: NO policy names here; main config specifies DIRECT and Host server:system.
 # Match behavior: DOMAIN-SUFFIX includes all subdomains. Rule entries are manually reviewed, NOT auto-imported from upstream.
@@ -726,3 +726,113 @@ DOMAIN-SUFFIX,pingan.com
 DOMAIN-SUFFIX,xhscdn.com
 # xiaohongshu.com | 小红书｜生活分享社区
 DOMAIN-SUFFIX,xiaohongshu.com
+
+# === 用户已安装 App 补充（46） ===
+# These are deliberate supplements beyond the original 353-domain four-way-intersection baseline.
+# trip.com is intentionally excluded by ownership policy; do not infer inclusion from Ctrip history.
+
+# --- 哔哩哔哩 Bilibili（16） ---
+# acg.tv | 哔哩哔哩官方短链／历史域名
+DOMAIN-SUFFIX,acg.tv
+# b23.tv | 哔哩哔哩官方短链接
+DOMAIN-SUFFIX,b23.tv
+# biliapi.com | 哔哩哔哩客户端／业务 API
+DOMAIN-SUFFIX,biliapi.com
+# biliapi.net | 哔哩哔哩客户端／业务 API
+DOMAIN-SUFFIX,biliapi.net
+# bilibili.com | 哔哩哔哩主站与 App 核心服务
+DOMAIN-SUFFIX,bilibili.com
+# bilibili.net | 哔哩哔哩关联业务域名
+DOMAIN-SUFFIX,bilibili.net
+# bilicdn1.com | 哔哩哔哩静态内容 CDN
+DOMAIN-SUFFIX,bilicdn1.com
+# bilicdn2.com | 哔哩哔哩静态内容 CDN
+DOMAIN-SUFFIX,bilicdn2.com
+# bilicdn3.com | 哔哩哔哩静态内容 CDN
+DOMAIN-SUFFIX,bilicdn3.com
+# bilicdn4.com | 哔哩哔哩静态内容 CDN
+DOMAIN-SUFFIX,bilicdn4.com
+# bilicdn5.com | 哔哩哔哩静态内容 CDN
+DOMAIN-SUFFIX,bilicdn5.com
+# biliimg.com | 哔哩哔哩图片／封面资源
+DOMAIN-SUFFIX,biliimg.com
+# bilivideo.com | 哔哩哔哩视频流与 CDN
+DOMAIN-SUFFIX,bilivideo.com
+# bilivideo.net | 哔哩哔哩视频流与 CDN
+DOMAIN-SUFFIX,bilivideo.net
+# hdslb.com | 哔哩哔哩接口／分发基础设施
+DOMAIN-SUFFIX,hdslb.com
+# hdslb.org | 哔哩哔哩关联基础设施
+DOMAIN-SUFFIX,hdslb.org
+
+# --- 阿里邮箱／支付宝／淘宝天猫／飞猪（13） ---
+# aliyun.com | 阿里云／阿里邮箱相关服务
+DOMAIN-SUFFIX,aliyun.com
+# mxhichina.com | 阿里企业邮箱邮件基础设施
+DOMAIN-SUFFIX,mxhichina.com
+# alipay.com | 支付宝主站与支付服务
+DOMAIN-SUFFIX,alipay.com
+# alipayobjects.com | 支付宝静态资源／接口对象
+DOMAIN-SUFFIX,alipayobjects.com
+# alipaydns.com | 支付宝网络与 DNS 基础设施
+DOMAIN-SUFFIX,alipaydns.com
+# alipaylog.com | 支付宝日志／业务基础设施
+DOMAIN-SUFFIX,alipaylog.com
+# taobao.com | 淘宝主站与 App 核心服务
+DOMAIN-SUFFIX,taobao.com
+# taobao.net | 淘宝关联业务域名
+DOMAIN-SUFFIX,taobao.net
+# tmall.com | 天猫电商
+DOMAIN-SUFFIX,tmall.com
+# alicdn.com | 阿里巴巴静态资源／CDN
+DOMAIN-SUFFIX,alicdn.com
+# aliimg.com | 阿里巴巴图片与静态资源
+DOMAIN-SUFFIX,aliimg.com
+# fliggy.com | 飞猪旅行
+DOMAIN-SUFFIX,fliggy.com
+# alitrip.com | 飞猪／阿里旅行历史与业务域名
+DOMAIN-SUFFIX,alitrip.com
+
+# --- 高德地图（3） ---
+# amap.com | 高德地图与开放平台
+DOMAIN-SUFFIX,amap.com
+# amapauto.com | 高德车载导航相关服务
+DOMAIN-SUFFIX,amapauto.com
+# autonavi.com | 高德地图／AutoNavi 接口与基础设施
+DOMAIN-SUFFIX,autonavi.com
+
+# --- 小米／米家（5） ---
+# mi.com | 小米主站与核心服务
+DOMAIN-SUFFIX,mi.com
+# mi-img.com | 小米图片与静态资源
+DOMAIN-SUFFIX,mi-img.com
+# xiaomi.com | 小米账号、设备与云服务
+DOMAIN-SUFFIX,xiaomi.com
+# xiaomi.net | 小米关联网络／服务域名
+DOMAIN-SUFFIX,xiaomi.net
+# miot-spec.org | 米家／MIoT 设备规范与智能家居服务
+DOMAIN-SUFFIX,miot-spec.org
+
+# --- 微信（4） ---
+# weixin.com | 微信中国业务域名
+DOMAIN-SUFFIX,weixin.com
+# wechat.com | 微信／WeChat 核心服务
+DOMAIN-SUFFIX,wechat.com
+# servicewechat.com | 微信小程序与服务基础设施
+DOMAIN-SUFFIX,servicewechat.com
+# weixinbridge.com | 微信业务桥接／基础设施
+DOMAIN-SUFFIX,weixinbridge.com
+
+# --- 中国银行（2） ---
+# bankofchina.com | 中国银行官网与在线服务
+DOMAIN-SUFFIX,bankofchina.com
+# boc.cn | 中国银行大陆业务域名
+DOMAIN-SUFFIX,boc.cn
+
+# --- Zepp Life／华米（3） ---
+# zepp.com | Zepp／Zepp Life 服务
+DOMAIN-SUFFIX,zepp.com
+# huami.com | 华米科技服务
+DOMAIN-SUFFIX,huami.com
+# amazfit.com | Amazfit／华米设备与服务
+DOMAIN-SUFFIX,amazfit.com
