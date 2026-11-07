@@ -712,9 +712,9 @@
 # Source: YousList https://cdn.jsdelivr.net/gh/adguardteam/HostlistsRegistry@main/assets/filter_15.txt
 # Source: Dowon Kakao/Daum 补充 https://raw.githubusercontent.com/Harrison-ldy/dowon-dns-for-ad/refs/heads/main/for%20kk.txt
 # Source: Dowon 中国 App 补充 https://raw.githubusercontent.com/Harrison-ldy/dowon-dns-for-ad/refs/heads/main/FOR%20CN.txt
-# Source-block-counts: {"adguard": 189743, "anti-ad": 101830, "china": 21, "kakao": 41, "ko": 386, "personal": 33, "youslist": 623}
-# Bundle-SHA256: f530c74207cec11197859b79564a54a772571d5705a0159d53ca4d12c915b7fc
-# Combined-rules: 214922
+# Source-block-counts: {"adguard": 189821, "anti-ad": 101830, "china": 21, "kakao": 41, "ko": 386, "personal": 33, "youslist": 623}
+# Bundle-SHA256: 27ccc29218dcc2462a8090d6715fe7a60d675857fa32393259160ca420f2bdc8
+# Combined-rules: 215000
 # Rules: 738
 AND,((DOMAIN-SUFFIX,2o7.net),(NOT,((DOMAIN-SUFFIX,citiintl.122.2o7.net))))
 AND,((DOMAIN-SUFFIX,a8.net),(NOT,((DOMAIN-SUFFIX,px.a8.net))))
