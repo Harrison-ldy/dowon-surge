@@ -1,5 +1,5 @@
 # Dowon Surge | Mainland China vendor-only DIRECT whitelist
-# 2026-10-24 v1.2 | 404 DOMAIN-SUFFIX rules | Base 353 + 46 installed-App supplements + 5 targeted fixes
+# 2026-11-11 v1.3 | 454 DOMAIN-SUFFIX rules | Previous 404 + 50 official service/App domain supplements
 # Mainland China-operated vendors/institutions only; omit overseas/HK/TW providers and uncertain ownership.
 # This is a Surge RULE-SET: NO policy names here; main config specifies DIRECT and Host server:system.
 # Match behavior: DOMAIN-SUFFIX includes all subdomains. Rule entries are manually reviewed, NOT auto-imported from upstream.
@@ -846,3 +846,105 @@ DOMAIN-SUFFIX,zepp.com
 DOMAIN-SUFFIX,huami.com
 # amazfit.com | Amazfit／华米设备与服务
 DOMAIN-SUFFIX,amazfit.com
+
+# === 2026-11-11 官方服务／已确认 App 自有业务与资源补充 (50) ===
+# 10086.cn | 中国移动网上营业厅
+DOMAIN-SUFFIX,10086.cn
+# 189.cn | 中国电信营业厅／集团服务
+DOMAIN-SUFFIX,189.cn
+# 360buy.com | 京东商城历史／兼容入口
+DOMAIN-SUFFIX,360buy.com
+# airchina.com.cn | 中国国际航空
+DOMAIN-SUFFIX,airchina.com.cn
+# alipay.cn | 支付宝业务入口
+DOMAIN-SUFFIX,alipay.cn
+# alipay.com.cn | 支付宝业务入口
+DOMAIN-SUFFIX,alipay.com.cn
+# antfortune.com | 蚂蚁财富
+DOMAIN-SUFFIX,antfortune.com
+# antgroup.com | 蚂蚁集团及支付宝关联服务
+DOMAIN-SUFFIX,antgroup.com
+# bdimg.com | 百度地图／百度图片资源
+DOMAIN-SUFFIX,bdimg.com
+# bdstatic.com | 百度静态资源
+DOMAIN-SUFFIX,bdstatic.com
+# bilibili.cn | 哔哩哔哩平台入口
+DOMAIN-SUFFIX,bilibili.cn
+# ccb.cn | 中国建设银行兼容／网银服务域
+DOMAIN-SUFFIX,ccb.cn
+# ccb.com.cn | 中国建设银行兼容／网银服务域
+DOMAIN-SUFFIX,ccb.com.cn
+# chinatelecom.com.cn | 中国电信营业厅／集团服务
+DOMAIN-SUFFIX,chinatelecom.com.cn
+# cmbchina.cn | 招商银行一网通
+DOMAIN-SUFFIX,cmbchina.cn
+# cmvideo.cn | 中国移动咪咕视频及账号/服务
+DOMAIN-SUFFIX,cmvideo.cn
+# ele.me | 饿了么／淘宝闪购及资源
+DOMAIN-SUFFIX,ele.me
+# eleme.cn | 饿了么／淘宝闪购及资源
+DOMAIN-SUFFIX,eleme.cn
+# elemecdn.com | 饿了么／淘宝闪购及资源
+DOMAIN-SUFFIX,elemecdn.com
+# feizhu.cn | 飞猪旅行入口
+DOMAIN-SUFFIX,feizhu.cn
+# feizhu.com | 飞猪旅行入口
+DOMAIN-SUFFIX,feizhu.com
+# foxmail.com | 腾讯Foxmail邮箱客户端服务
+DOMAIN-SUFFIX,foxmail.com
+# freshhema.com | 盒马服务入口
+DOMAIN-SUFFIX,freshhema.com
+# gaode.com | 高德地图
+DOMAIN-SUFFIX,gaode.com
+# gtimg.cn | 腾讯资源、QQ空间及微云
+DOMAIN-SUFFIX,gtimg.cn
+# hemaos.com | 盒马业务服务
+DOMAIN-SUFFIX,hemaos.com
+# hxb.com.cn | 华夏银行
+DOMAIN-SUFFIX,hxb.com.cn
+# jddj.com | 京东到家／京东秒送
+DOMAIN-SUFFIX,jddj.com
+# jdl.com | 京东物流
+DOMAIN-SUFFIX,jdl.com
+# jingxi.com | 京东京喜业务
+DOMAIN-SUFFIX,jingxi.com
+# migu.cn | 中国移动咪咕视频及账号/服务
+DOMAIN-SUFFIX,migu.cn
+# miui.com | 小米MIUI及小米社区
+DOMAIN-SUFFIX,miui.com
+# mybank.cn | 网商银行
+DOMAIN-SUFFIX,mybank.cn
+# nhsa.gov.cn | 国家医保局／医保服务
+DOMAIN-SUFFIX,nhsa.gov.cn
+# qdmm.com | 阅文／起点女生网
+DOMAIN-SUFFIX,qdmm.com
+# qunar.com | 去哪儿业务及图片/静态资源
+DOMAIN-SUFFIX,qunar.com
+# qunarzz.com | 去哪儿业务及图片/静态资源
+DOMAIN-SUFFIX,qunarzz.com
+# qzone.com | 腾讯资源、QQ空间及微云
+DOMAIN-SUFFIX,qzone.com
+# rednotecdn.com | 小红书图片及前端资源
+DOMAIN-SUFFIX,rednotecdn.com
+# sichuanair.com | 四川航空
+DOMAIN-SUFFIX,sichuanair.com
+# sina.cn | 新浪／微博主站、接口及图片资源
+DOMAIN-SUFFIX,sina.cn
+# sina.com.cn | 新浪／微博主站、接口及图片资源
+DOMAIN-SUFFIX,sina.com.cn
+# sinaimg.cn | 新浪／微博主站、接口及图片资源
+DOMAIN-SUFFIX,sinaimg.cn
+# t.cn | 微博短链接
+DOMAIN-SUFFIX,t.cn
+# weibo.cn | 新浪／微博主站、接口及图片资源
+DOMAIN-SUFFIX,weibo.cn
+# weiyun.com | 腾讯资源、QQ空间及微云
+DOMAIN-SUFFIX,weiyun.com
+# xiaomi.cn | 小米MIUI及小米社区
+DOMAIN-SUFFIX,xiaomi.cn
+# xiaomiyoupin.com | 小米有品
+DOMAIN-SUFFIX,xiaomiyoupin.com
+# ykimg.com | 优酷视频及图片资源
+DOMAIN-SUFFIX,ykimg.com
+# youku.com | 优酷视频及图片资源
+DOMAIN-SUFFIX,youku.com
