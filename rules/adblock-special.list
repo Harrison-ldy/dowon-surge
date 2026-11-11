@@ -712,9 +712,9 @@
 # Source: YousList https://cdn.jsdelivr.net/gh/adguardteam/HostlistsRegistry@main/assets/filter_15.txt
 # Source: Dowon Kakao/Daum 补充 https://raw.githubusercontent.com/Harrison-ldy/dowon-dns-for-ad/refs/heads/main/for%20kk.txt
 # Source: Dowon 中国 App 补充 https://raw.githubusercontent.com/Harrison-ldy/dowon-dns-for-ad/refs/heads/main/FOR%20CN.txt
-# Source-block-counts: {"adguard": 187928, "anti-ad": 102458, "china": 21, "kakao": 41, "ko": 386, "personal": 33, "youslist": 623}
-# Bundle-SHA256: c398a417b39274ac050f42d656ef2f2323e06385ea3004cba7d6ab3907518d08
-# Combined-rules: 215505
+# Source-block-counts: {"adguard": 188311, "anti-ad": 101026, "china": 21, "kakao": 41, "ko": 386, "personal": 33, "youslist": 623}
+# Bundle-SHA256: f73297c41bb5ce39dc3956cec634aa4a1990858ecd7dc422f98c86d4b7a4e7c7
+# Combined-rules: 213531
 # Rules: 738
 AND,((DOMAIN-SUFFIX,2o7.net),(NOT,((DOMAIN-SUFFIX,citiintl.122.2o7.net))))
 AND,((DOMAIN-SUFFIX,a8.net),(NOT,((DOMAIN-SUFFIX,px.a8.net))))
@@ -788,7 +788,7 @@ AND,((DOMAIN-SUFFIX,se.360.cn),(NOT,((OR,((DOMAIN-WILDCARD,*.profile*.se.360.cn)
 AND,((DOMAIN-SUFFIX,sellpoint.net),(NOT,((DOMAIN-SUFFIX,a.sellpoint.net))))
 AND,((DOMAIN-SUFFIX,sendpulse.com),(NOT,((DOMAIN-SUFFIX,login.sendpulse.com))))
 AND,((DOMAIN-SUFFIX,silverpop.com),(NOT,((DOMAIN-SUFFIX,cs.silverpop.com))))
-AND,((DOMAIN-SUFFIX,taboola.com),(NOT,((OR,((DOMAIN,cdn.taboola.com),(DOMAIN-SUFFIX,ads.taboola.com))))))
+AND,((DOMAIN-SUFFIX,taboola.com),(NOT,((OR,((DOMAIN,api.taboola.com),(DOMAIN,cdn.taboola.com),(DOMAIN-SUFFIX,ads.taboola.com))))))
 AND,((DOMAIN-SUFFIX,targetspot.com),(NOT,((DOMAIN-SUFFIX,radiofrance.targetspot.com))))
 AND,((DOMAIN-SUFFIX,tealiumiq.com),(NOT,((DOMAIN-SUFFIX,my.tealiumiq.com))))
 AND,((DOMAIN-SUFFIX,tr.line.me),(NOT,((DOMAIN-SUFFIX,oa.tr.line.me))))
