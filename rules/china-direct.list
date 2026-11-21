@@ -1,8 +1,8 @@
 # Dowon Surge | Mainland China vendor-only DIRECT whitelist
-# 2026-11-11 v1.3 | 454 DOMAIN-SUFFIX rules | Previous 404 + 50 official service/App domain supplements
+# 2026-11-21 v1.4 | 463 rules: 460 DOMAIN-SUFFIX + 3 DOMAIN
 # Mainland China-operated vendors/institutions only; omit overseas/HK/TW providers and uncertain ownership.
 # This is a Surge RULE-SET: NO policy names here; main config specifies DIRECT and Host server:system.
-# Match behavior: DOMAIN-SUFFIX includes all subdomains. Rule entries are manually reviewed, NOT auto-imported from upstream.
+# Match behavior: DOMAIN matches the exact host; DOMAIN-SUFFIX includes the domain and all subdomains. Rule entries are manually reviewed, NOT auto-imported from upstream.
 # NOTE: annotations marked '待复核' are service-level metadata needing extra research, NOT proof of ownership.
 
 # === 运营商／银行／官方机构 (24) ===
@@ -948,3 +948,23 @@ DOMAIN-SUFFIX,xiaomiyoupin.com
 DOMAIN-SUFFIX,ykimg.com
 # youku.com | 优酷视频及图片资源
 DOMAIN-SUFFIX,youku.com
+
+# === v1.4 业务域名补充 (9) ===
+# cmbimg.cn | 招商银行、掌上生活的网关和资源
+DOMAIN-SUFFIX,cmbimg.cn
+# qq.com.cn | 腾讯域名，覆盖微信小程序相关服务
+DOMAIN-SUFFIX,qq.com.cn
+# wechatpay.cn | 微信支付资源
+DOMAIN-SUFFIX,wechatpay.cn
+# cup.com.cn | 中国银联资源
+DOMAIN-SUFFIX,cup.com.cn
+# api.mijia.tech | 米家 API 及其子域
+DOMAIN-SUFFIX,api.mijia.tech
+# 300hu.com | 京东视频资源
+DOMAIN-SUFFIX,300hu.com
+# alimei-auth.alibaba.com | 阿里邮箱客户端
+DOMAIN,alimei-auth.alibaba.com
+# alimei-sub.alibaba.com | 阿里邮箱客户端
+DOMAIN,alimei-sub.alibaba.com
+# api.miinsurtech.com | 米家访问的厚积保险服务
+DOMAIN,api.miinsurtech.com
