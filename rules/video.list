@@ -132,6 +132,15 @@ DOMAIN-SUFFIX,libvio.in
 # 飞快TV
 DOMAIN-SUFFIX,feikuai.in
 
+# 飞快TV 视频分片主机（2026-11-22 实测）
+DOMAIN,cdn.yzzy31-play.com
+DOMAIN,play.phimgood.com
+DOMAIN,player.yzzy37-play.vip
+DOMAIN,svip.ryiplay18.com
+DOMAIN,v.fengbao14.com
+DOMAIN,v14.wsyzyts.vip
+DOMAIN,vod.ffzy-bofang.com
+
 # 小宝影院
 DOMAIN-SUFFIX,xiaoheimi.cc
 
