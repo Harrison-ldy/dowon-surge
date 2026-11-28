@@ -712,10 +712,10 @@
 # Source: YousList https://cdn.jsdelivr.net/gh/adguardteam/HostlistsRegistry@main/assets/filter_15.txt
 # Source: Dowon Kakao/Daum 补充 https://raw.githubusercontent.com/Harrison-ldy/dowon-dns-for-ad/refs/heads/main/for%20kk.txt
 # Source: Dowon 中国 App 补充 https://raw.githubusercontent.com/Harrison-ldy/dowon-dns-for-ad/refs/heads/main/FOR%20CN.txt
-# Source-block-counts: {"adguard": 195002, "anti-ad": 101988, "china": 21, "kakao": 41, "ko": 387, "personal": 33, "youslist": 623}
-# Bundle-SHA256: 54e014f9abe5ae035148757ff0446ae81386729214dc7b995885100a0f1138f1
-# Combined-rules: 220114
-# Rules: 738
+# Source-block-counts: {"adguard": 195402, "anti-ad": 101988, "china": 21, "kakao": 41, "ko": 387, "personal": 33, "youslist": 623}
+# Bundle-SHA256: 756678f066e5849728d13f001b8ce7f50554d347b3e5cd104f4b0a4254d1a0fa
+# Combined-rules: 220514
+# Rules: 741
 AND,((DOMAIN-SUFFIX,2o7.net),(NOT,((DOMAIN-SUFFIX,citiintl.122.2o7.net))))
 AND,((DOMAIN-SUFFIX,a8.net),(NOT,((DOMAIN-SUFFIX,px.a8.net))))
 AND,((DOMAIN-SUFFIX,adjust.com),(NOT,((OR,((DOMAIN-SUFFIX,app.adjust.com),(DOMAIN-SUFFIX,go.adjust.com))))))
@@ -1236,6 +1236,7 @@ OR,((DOMAIN-WILDCARD,*.event.*.shoplive.cloud),(DOMAIN-WILDCARD,event.*.shoplive
 OR,((DOMAIN-WILDCARD,*.events*.cre.ma),(DOMAIN-WILDCARD,events*.cre.ma))
 OR,((DOMAIN-WILDCARD,*.events-*.op.hicloud.com),(DOMAIN-WILDCARD,events-*.op.hicloud.com))
 OR,((DOMAIN-WILDCARD,*.events-api*.outfit7.com),(DOMAIN-WILDCARD,events-api*.outfit7.com))
+OR,((DOMAIN-WILDCARD,*.events.*.oci.oraclecloud.com),(DOMAIN-WILDCARD,events.*.oci.oraclecloud.com))
 OR,((DOMAIN-WILDCARD,*.f-log-*.grammarly.io),(DOMAIN-WILDCARD,f-log-*.grammarly.io))
 OR,((DOMAIN-WILDCARD,*.fanpingbi*.gaokao.com),(DOMAIN-WILDCARD,fanpingbi*.gaokao.com))
 OR,((DOMAIN-WILDCARD,*.faro-collector-prod-*.grafana.net),(DOMAIN-WILDCARD,faro-collector-prod-*.grafana.net))
@@ -1297,6 +1298,7 @@ OR,((DOMAIN-WILDCARD,*.log-v*-boot.capcutapi.com),(DOMAIN-WILDCARD,log-v*-boot.c
 OR,((DOMAIN-WILDCARD,*.log-va*.capcutapi.com),(DOMAIN-WILDCARD,log-va*.capcutapi.com))
 OR,((DOMAIN-WILDCARD,*.log.*.hunantv.com),(DOMAIN-WILDCARD,log.*.hunantv.com))
 OR,((DOMAIN-WILDCARD,*.logger-*.dailymotion.com),(DOMAIN-WILDCARD,logger-*.dailymotion.com))
+OR,((DOMAIN-WILDCARD,*.logging.*.oci.oraclecloud.com),(DOMAIN-WILDCARD,logging.*.oci.oraclecloud.com))
 OR,((DOMAIN-WILDCARD,*.logs*.smithsonian.museum),(DOMAIN-WILDCARD,logs*.smithsonian.museum))
 OR,((DOMAIN-WILDCARD,*.logs-*.rebxgame.com),(DOMAIN-WILDCARD,logs-*.rebxgame.com))
 OR,((DOMAIN-WILDCARD,*.logs.collector.*.cloud.solarwinds.com),(DOMAIN-WILDCARD,logs.collector.*.cloud.solarwinds.com))
@@ -1408,6 +1410,7 @@ OR,((DOMAIN-WILDCARD,*.tag-based.s3.*.amazonaws.com),(DOMAIN-WILDCARD,tag-based.
 OR,((DOMAIN-WILDCARD,*.tag-v*.kuzen.io),(DOMAIN-WILDCARD,tag-v*.kuzen.io))
 OR,((DOMAIN-WILDCARD,*.telemetry*.transcend.io),(DOMAIN-WILDCARD,telemetry*.transcend.io))
 OR,((DOMAIN-WILDCARD,*.telemetry.*.oci.oraclecloud.com),(DOMAIN-WILDCARD,telemetry.*.oci.oraclecloud.com))
+OR,((DOMAIN-WILDCARD,*.telemetry.*.oraclecloud.com),(DOMAIN-WILDCARD,telemetry.*.oraclecloud.com))
 OR,((DOMAIN-WILDCARD,*.telemetry.*.pvp.net),(DOMAIN-WILDCARD,telemetry.*.pvp.net))
 OR,((DOMAIN-WILDCARD,*.teleriumads-*.netdna-ssl.com),(DOMAIN-WILDCARD,teleriumads-*.netdna-ssl.com))
 OR,((DOMAIN-WILDCARD,*.tnc*.tiktokv.com),(DOMAIN-WILDCARD,tnc*.tiktokv.com))
